@@ -1,12 +1,13 @@
+require('dotenv').config()
 const mysql = require('mysql')
 const numeral = require('numeral')
 
 const connection = mysql.createConnection({
-    host: 'mysql.db.bot-hosting.net',
+    host: process.env.DB_HOST,
     port: 3306,
-    user: 'u94877_3YOVsThJdw',
-    password: 'kAOki+vjLYzS!Iz2gm+vUOei',
-    database: 's94877_Levels',
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
 });
 
 function getLeaderboard() {
