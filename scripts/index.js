@@ -23,7 +23,7 @@ function getLeaderboard() {
     });
 }
 
-let pTest = document:GetElementById('test')
+let pTest = document.GetElementById('test')
 let text = ''
 getLeaderboard()
   .then(results => {
