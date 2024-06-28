@@ -22,6 +22,6 @@ jobs:
       run: npm install
 
     - name: Run script
-      run: node your_script.js
+      run: node scripts/index.js
       env:
         DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
