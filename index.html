@@ -6,7 +6,17 @@
       <title>Document</title>
   </head>
   <body>
-      <script src="scripts/index.js"></script>
+      <script>
+        fetch('/leaderboard')
+            .then(response => response.json())
+            .then(data => {
+                const pTest = document.getElementById('test');
+                if (pTest) {
+                    pTest.innerText = JSON.stringify(data);
+                }
+            })
+            .catch(error => console.error('Error fetching leaderboard:', error));
+    </script>
       <P id="test"></P>
   </body>
 </html>
